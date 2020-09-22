@@ -1,0 +1,571 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>17/7/3</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Sep 22 11:28:01 PDT 2020</td>
+</tr>
+<tr><td>Total time:</td><td>76 seconds (76056 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='PHPTravel.End2EndExample.LandingPageHeaderTest.callNowVerification()'><b>callNowVerification</b><br>Test class: PHPTravel.End2EndExample.LandingPageHeaderTest</td>
+<td><div><pre>java.lang.AssertionError: expected [Call Now: +1-360-244-9610] but found [phone Call Now : +1-234-56789]
+	at PHPTravel.End2EndExample.LandingPageHeaderTest.callNowVerification(LandingPageHeaderTest.java:78)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1182311147", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1182311147'><pre>java.lang.AssertionError: expected [Call Now: +1-360-244-9610] but found [phone Call Now : +1-234-56789]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:575)
+	at org.testng.Assert.assertEquals(Assert.java:585)
+	at PHPTravel.End2EndExample.LandingPageHeaderTest.callNowVerification(LandingPageHeaderTest.java:78)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:821)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:588)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1214)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1136)
+	at org.testng.TestNG.runSuites(TestNG.java:1066)
+	at org.testng.TestNG.run(TestNG.java:1034)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>PHPTravel.End2EndExample.LandingPageHeaderTest@86be70a</td></tr>
+<tr>
+<td title='PHPTravel.End2EndExample.LandingPageHotelsTest.checkinCalendarTitle()'><b>checkinCalendarTitle</b><br>Test class: PHPTravel.End2EndExample.LandingPageHotelsTest</td>
+<td><div><pre>java.lang.AssertionError: expected [September,2020] but found [September,
+2020]
+	at PHPTravel.End2EndExample.LandingPageHotelsTest.checkinCalendarTitle(LandingPageHotelsTest.java:121)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace633131207", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace633131207'><pre>java.lang.AssertionError: expected [September,2020] but found [September,
+2020]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:575)
+	at org.testng.Assert.assertEquals(Assert.java:585)
+	at PHPTravel.End2EndExample.LandingPageHotelsTest.checkinCalendarTitle(LandingPageHotelsTest.java:121)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:821)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:588)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1214)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1136)
+	at org.testng.TestNG.runSuites(TestNG.java:1066)
+	at org.testng.TestNG.run(TestNG.java:1034)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>2</td>
+<td>PHPTravel.End2EndExample.LandingPageHotelsTest@480bdb19</td></tr>
+<tr>
+<td title='PHPTravel.End2EndExample.LandingPageHeaderTest.currencyTypes()'><b>currencyTypes</b><br>Test class: PHPTravel.End2EndExample.LandingPageHeaderTest</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at PHPTravel.End2EndExample.LandingPageHeaderTest.currencyTypes(LandingPageHeaderTest.java:114)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace635610193", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace635610193'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.failNotEquals(Assert.java:968)
+	at org.testng.Assert.assertTrue(Assert.java:43)
+	at org.testng.Assert.assertTrue(Assert.java:53)
+	at PHPTravel.End2EndExample.LandingPageHeaderTest.currencyTypes(LandingPageHeaderTest.java:114)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:821)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:588)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1214)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1136)
+	at org.testng.TestNG.runSuites(TestNG.java:1066)
+	at org.testng.TestNG.run(TestNG.java:1034)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>2</td>
+<td>PHPTravel.End2EndExample.LandingPageHeaderTest@86be70a</td></tr>
+<tr>
+<td title='PHPTravel.End2EndExample.LandingPageHeaderTest.languageTypes()'><b>languageTypes</b><br>Test class: PHPTravel.End2EndExample.LandingPageHeaderTest</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at PHPTravel.End2EndExample.LandingPageHeaderTest.languageTypes(LandingPageHeaderTest.java:179)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace87242619", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace87242619'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.failNotEquals(Assert.java:968)
+	at org.testng.Assert.assertTrue(Assert.java:43)
+	at org.testng.Assert.assertTrue(Assert.java:53)
+	at PHPTravel.End2EndExample.LandingPageHeaderTest.languageTypes(LandingPageHeaderTest.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:821)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:588)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1214)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1136)
+	at org.testng.TestNG.runSuites(TestNG.java:1066)
+	at org.testng.TestNG.run(TestNG.java:1034)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>PHPTravel.End2EndExample.LandingPageHeaderTest@86be70a</td></tr>
+<tr>
+<td title='PHPTravel.End2EndExample.LandingPageHotelsTest.verifyECheckinDefaultDate()'><b>verifyECheckinDefaultDate</b><br>Test class: PHPTravel.End2EndExample.LandingPageHotelsTest</td>
+<td><div><pre>java.lang.AssertionError: expected [22/09/2020] but found [25/09/2020]
+	at PHPTravel.End2EndExample.LandingPageHotelsTest.verifyECheckinDefaultDate(LandingPageHotelsTest.java:97)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace288615534", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace288615534'><pre>java.lang.AssertionError: expected [22/09/2020] but found [25/09/2020]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:575)
+	at org.testng.Assert.assertEquals(Assert.java:585)
+	at PHPTravel.End2EndExample.LandingPageHotelsTest.verifyECheckinDefaultDate(LandingPageHotelsTest.java:97)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:821)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:588)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1214)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1136)
+	at org.testng.TestNG.runSuites(TestNG.java:1066)
+	at org.testng.TestNG.run(TestNG.java:1034)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>PHPTravel.End2EndExample.LandingPageHotelsTest@480bdb19</td></tr>
+<tr>
+<td title='PHPTravel.End2EndExample.LandingPageHotelsTest.verifyTabText()'><b>verifyTabText</b><br>Test class: PHPTravel.End2EndExample.LandingPageHotelsTest</td>
+<td><div><pre>java.lang.AssertionError: expected [HOTELS] but found [Hotels]
+	at PHPTravel.End2EndExample.LandingPageHotelsTest.verifyTabText(LandingPageHotelsTest.java:44)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1807894765", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1807894765'><pre>java.lang.AssertionError: expected [HOTELS] but found [Hotels]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:575)
+	at org.testng.Assert.assertEquals(Assert.java:585)
+	at PHPTravel.End2EndExample.LandingPageHotelsTest.verifyTabText(LandingPageHotelsTest.java:44)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:821)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:588)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1214)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1136)
+	at org.testng.TestNG.runSuites(TestNG.java:1066)
+	at org.testng.TestNG.run(TestNG.java:1034)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>PHPTravel.End2EndExample.LandingPageHotelsTest@480bdb19</td></tr>
+<tr>
+<td title='PHPTravel.End2EndExample.LandingPageHotelsTest.verifyTitlesText()'><b>verifyTitlesText</b><br>Test class: PHPTravel.End2EndExample.LandingPageHotelsTest</td>
+<td><div><pre>java.lang.AssertionError: Lists differ at element [3]: ADULTS (13-75) != ADULTS (12-75) expected [ADULTS (13-75)] but found [ADULTS (12-75)]
+	at PHPTravel.End2EndExample.LandingPageHotelsTest.verifyTitlesText(LandingPageHotelsTest.java:65)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace67620673", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace67620673'><pre>java.lang.AssertionError: Lists differ at element [3]: ADULTS (13-75) != ADULTS (12-75) expected [ADULTS (13-75)] but found [ADULTS (12-75)]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+	at org.testng.Assert.assertEquals(Assert.java:1030)
+	at org.testng.Assert.assertEquals(Assert.java:992)
+	at PHPTravel.End2EndExample.LandingPageHotelsTest.verifyTitlesText(LandingPageHotelsTest.java:65)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:821)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:588)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1214)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1136)
+	at org.testng.TestNG.runSuites(TestNG.java:1066)
+	at org.testng.TestNG.run(TestNG.java:1034)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>PHPTravel.End2EndExample.LandingPageHotelsTest@480bdb19</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='PHPTravel.End2EndExample.LandingPageHeaderTest.clickAboutUs()'><b>clickAboutUs</b><br>Test class: PHPTravel.End2EndExample.LandingPageHeaderTest</td>
+<td></td>
+<td>2</td>
+<td>PHPTravel.End2EndExample.LandingPageHeaderTest@86be70a</td></tr>
+<tr>
+<td title='PHPTravel.End2EndExample.LandingPageHeaderTest.clickBackToHome()'><b>clickBackToHome</b><br>Test class: PHPTravel.End2EndExample.LandingPageHeaderTest</td>
+<td></td>
+<td>10</td>
+<td>PHPTravel.End2EndExample.LandingPageHeaderTest@86be70a</td></tr>
+<tr>
+<td title='PHPTravel.End2EndExample.LandingPageHeaderTest.clickCompanyLogo()'><b>clickCompanyLogo</b><br>Test class: PHPTravel.End2EndExample.LandingPageHeaderTest</td>
+<td></td>
+<td>5</td>
+<td>PHPTravel.End2EndExample.LandingPageHeaderTest@86be70a</td></tr>
+<tr>
+<td title='PHPTravel.End2EndExample.LandingPageHeaderTest.clickContact()'><b>clickContact</b><br>Test class: PHPTravel.End2EndExample.LandingPageHeaderTest</td>
+<td></td>
+<td>1</td>
+<td>PHPTravel.End2EndExample.LandingPageHeaderTest@86be70a</td></tr>
+<tr>
+<td title='PHPTravel.End2EndExample.LandingPageHeaderTest.currencyDefaultTextVerification()'><b>currencyDefaultTextVerification</b><br>Test class: PHPTravel.End2EndExample.LandingPageHeaderTest</td>
+<td></td>
+<td>0</td>
+<td>PHPTravel.End2EndExample.LandingPageHeaderTest@86be70a</td></tr>
+<tr>
+<td title='PHPTravel.End2EndExample.LandingPageHeaderTest.currencyDropDownVerification()'><b>currencyDropDownVerification</b><br>Test class: PHPTravel.End2EndExample.LandingPageHeaderTest</td>
+<td></td>
+<td>1</td>
+<td>PHPTravel.End2EndExample.LandingPageHeaderTest@86be70a</td></tr>
+<tr>
+<td title='PHPTravel.End2EndExample.LandingPageHotelsTest.currentDayHighlightedCheckin()'><b>currentDayHighlightedCheckin</b><br>Test class: PHPTravel.End2EndExample.LandingPageHotelsTest</td>
+<td></td>
+<td>0</td>
+<td>PHPTravel.End2EndExample.LandingPageHotelsTest@480bdb19</td></tr>
+<tr>
+<td title='PHPTravel.End2EndExample.LandingPageHeaderTest.languageDefaultTextVerification()'><b>languageDefaultTextVerification</b><br>Test class: PHPTravel.End2EndExample.LandingPageHeaderTest</td>
+<td></td>
+<td>0</td>
+<td>PHPTravel.End2EndExample.LandingPageHeaderTest@86be70a</td></tr>
+<tr>
+<td title='PHPTravel.End2EndExample.LandingPageHeaderTest.languageDropDownVerification()'><b>languageDropDownVerification</b><br>Test class: PHPTravel.End2EndExample.LandingPageHeaderTest</td>
+<td></td>
+<td>0</td>
+<td>PHPTravel.End2EndExample.LandingPageHeaderTest@86be70a</td></tr>
+<tr>
+<td title='PHPTravel.End2EndExample.LandingPageHeaderTest.languageSelection()'><b>languageSelection</b><br>Test class: PHPTravel.End2EndExample.LandingPageHeaderTest</td>
+<td></td>
+<td>0</td>
+<td>PHPTravel.End2EndExample.LandingPageHeaderTest@86be70a</td></tr>
+<tr>
+<td title='PHPTravel.End2EndExample.LandingPageHeaderTest.mouseOverCompany()'><b>mouseOverCompany</b><br>Test class: PHPTravel.End2EndExample.LandingPageHeaderTest</td>
+<td></td>
+<td>0</td>
+<td>PHPTravel.End2EndExample.LandingPageHeaderTest@86be70a</td></tr>
+<tr>
+<td title='PHPTravel.End2EndExample.LandingPageHeaderTest.myAccountDefaultText()'><b>myAccountDefaultText</b><br>Test class: PHPTravel.End2EndExample.LandingPageHeaderTest</td>
+<td></td>
+<td>0</td>
+<td>PHPTravel.End2EndExample.LandingPageHeaderTest@86be70a</td></tr>
+<tr>
+<td title='PHPTravel.End2EndExample.LandingPageHeaderTest.myAccountDropDownVerification()'><b>myAccountDropDownVerification</b><br>Test class: PHPTravel.End2EndExample.LandingPageHeaderTest</td>
+<td></td>
+<td>0</td>
+<td>PHPTravel.End2EndExample.LandingPageHeaderTest@86be70a</td></tr>
+<tr>
+<td title='PHPTravel.End2EndExample.LandingPageHeaderTest.selectLogin()'><b>selectLogin</b><br>Test class: PHPTravel.End2EndExample.LandingPageHeaderTest</td>
+<td></td>
+<td>0</td>
+<td>PHPTravel.End2EndExample.LandingPageHeaderTest@86be70a</td></tr>
+<tr>
+<td title='PHPTravel.End2EndExample.LandingPageHotelsTest.verifyDestinationDefaultText()'><b>verifyDestinationDefaultText</b><br>Test class: PHPTravel.End2EndExample.LandingPageHotelsTest</td>
+<td></td>
+<td>0</td>
+<td>PHPTravel.End2EndExample.LandingPageHotelsTest@480bdb19</td></tr>
+<tr>
+<td title='PHPTravel.End2EndExample.LandingPageHotelsTest.verifyDestinationSuggest()'><b>verifyDestinationSuggest</b><br>Test class: PHPTravel.End2EndExample.LandingPageHotelsTest</td>
+<td></td>
+<td>6</td>
+<td>PHPTravel.End2EndExample.LandingPageHotelsTest@480bdb19</td></tr>
+<tr>
+<td title='PHPTravel.End2EndExample.LandingPageHotelsTest.verifyOnClickCheckin()'><b>verifyOnClickCheckin</b><br>Test class: PHPTravel.End2EndExample.LandingPageHotelsTest</td>
+<td></td>
+<td>0</td>
+<td>PHPTravel.End2EndExample.LandingPageHotelsTest@480bdb19</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='PHPTravel.End2EndExample.LandingPageHotelsTest.checkinBackArrow()'><b>checkinBackArrow</b><br>Test class: PHPTravel.End2EndExample.LandingPageHotelsTest</td>
+<td><div><pre>java.lang.Throwable: Method LandingPageHotelsTest.checkinBackArrow()[pri:0, instance:PHPTravel.End2EndExample.LandingPageHotelsTest@480bdb19] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1523510420", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1523510420'><pre>java.lang.Throwable: Method LandingPageHotelsTest.checkinBackArrow()[pri:0, instance:PHPTravel.End2EndExample.LandingPageHotelsTest@480bdb19] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:588)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1214)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1136)
+	at org.testng.TestNG.runSuites(TestNG.java:1066)
+	at org.testng.TestNG.run(TestNG.java:1034)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>PHPTravel.End2EndExample.LandingPageHotelsTest@480bdb19</td></tr>
+<tr>
+<td title='PHPTravel.End2EndExample.LandingPageHotelsTest.checkinForwardArrow()'><b>checkinForwardArrow</b><br>Test class: PHPTravel.End2EndExample.LandingPageHotelsTest</td>
+<td><div><pre>java.lang.Throwable: Method LandingPageHotelsTest.checkinForwardArrow()[pri:0, instance:PHPTravel.End2EndExample.LandingPageHotelsTest@480bdb19] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1187779195", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1187779195'><pre>java.lang.Throwable: Method LandingPageHotelsTest.checkinForwardArrow()[pri:0, instance:PHPTravel.End2EndExample.LandingPageHotelsTest@480bdb19] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:588)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1214)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1136)
+	at org.testng.TestNG.runSuites(TestNG.java:1066)
+	at org.testng.TestNG.run(TestNG.java:1034)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>PHPTravel.End2EndExample.LandingPageHotelsTest@480bdb19</td></tr>
+<tr>
+<td title='PHPTravel.End2EndExample.LandingPageHeaderTest.currencySelection()'><b>currencySelection</b><br>Test class: PHPTravel.End2EndExample.LandingPageHeaderTest</td>
+<td><div><pre>java.lang.Throwable: Method LandingPageHeaderTest.currencySelection()[pri:0, instance:PHPTravel.End2EndExample.LandingPageHeaderTest@86be70a] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace4073506", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace4073506'><pre>java.lang.Throwable: Method LandingPageHeaderTest.currencySelection()[pri:0, instance:PHPTravel.End2EndExample.LandingPageHeaderTest@86be70a] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:588)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1214)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1136)
+	at org.testng.TestNG.runSuites(TestNG.java:1066)
+	at org.testng.TestNG.run(TestNG.java:1034)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>PHPTravel.End2EndExample.LandingPageHeaderTest@86be70a</td></tr>
+</table><p>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="PHPTravel.End2EndExample.LandingPageHeaderTest">
+        <methods>
+          <include name="currencySelection"/>
+          <include name="languageTypes"/>
+          <include name="teardown"/>
+          <include name="currencyTypes"/>
+          <include name="initialize"/>
+          <include name="callNowVerification"/>
+        </methods>
+      </class> <!-- PHPTravel.End2EndExample.LandingPageHeaderTest -->
+      <class name="PHPTravel.End2EndExample.LandingPageHotelsTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="checkinBackArrow"/>
+          <include name="checkinForwardArrow"/>
+          <include name="verifyTabText"/>
+          <include name="verifyTitlesText"/>
+          <include name="checkinCalendarTitle"/>
+          <include name="verifyECheckinDefaultDate"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- PHPTravel.End2EndExample.LandingPageHotelsTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
